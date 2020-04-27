@@ -1,4 +1,4 @@
-package sjdbc.db.sharding.table.springboot.algorithm;
+package sjdbc.db.sharding.table.springboot;
 
 import java.util.Collection;
 

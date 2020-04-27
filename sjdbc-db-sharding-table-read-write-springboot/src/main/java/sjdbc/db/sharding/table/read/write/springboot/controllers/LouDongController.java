@@ -1,4 +1,4 @@
-package sjdbc.db.sharding.table.read.write.springboot.controller;
+package sjdbc.db.sharding.table.read.write.springboot.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

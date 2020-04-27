@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="sjdbc.db.sharding.table.read.write.range.group.springboot.po.LouDong" alias="LouDong"></typeAlias>
+        <typeAlias type="sjdbc.db.sharding.table.read.write.range.group.springboot.po.User" alias="User"></typeAlias>
+    </typeAliases>
+    <mappers>
+        <mapper resource="META-INF/mappers/User.xml"/>
+        <mapper resource="META-INF/mappers/LouDong.xml"/>
+    </mappers>
+</configuration>

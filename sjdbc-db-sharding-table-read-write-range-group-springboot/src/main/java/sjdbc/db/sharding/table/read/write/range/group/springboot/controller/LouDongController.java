@@ -1,4 +1,4 @@
-package sjdbc.db.sharding.table.read.write.springboot.controller;
+package sjdbc.db.sharding.table.read.write.range.group.springboot.controller;
 
 import sjdbc.db.sharding.table.read.write.range.group.springboot.po.LouDong;
 import sjdbc.db.sharding.table.read.write.range.group.springboot.service.LouDongService;

@@ -1,4 +1,4 @@
-package sjdbc.db.sharding.table.springboot.algorithm;
+package sjdbc.db.sharding.table.read.write.range.group.springboot.algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;

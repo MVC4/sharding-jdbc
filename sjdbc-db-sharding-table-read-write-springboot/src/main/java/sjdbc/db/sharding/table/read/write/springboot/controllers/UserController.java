@@ -1,13 +1,12 @@
-package sjdbc.db.sharding.table.read.write.springboot.controller;
+package sjdbc.db.sharding.table.read.write.springboot.controllers;
 
-import sjdbc.db.sharding.table.read.write.range.group.springboot.service.UserService;
-import org.apache.shardingsphere.api.hint.HintManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import sjdbc.db.sharding.table.read.write.springboot.po.User;
+import sjdbc.db.sharding.table.read.write.springboot.services.UserService;
 
-import sjdbc.db.sharding.table.read.write.range.group.springboot.po.User;
 
 @RestController
 public class UserController {
@@ -17,15 +16,13 @@ public class UserController {
 	
 	@GetMapping("/users")
 	public Object list() {
-		HintManager.getInstance().setMasterRouteOnly();
 		return userService.list();
 	}
 	
 	@GetMapping("/add")
 	public Object add() {
-		for (long i = 31; i <= 60; i++) {
+		for (long i = 0; i < 100; i++) {
 			User user = new User();
-			user.setId(i);
 			user.setCity("深圳");
 			user.setName("李四");
 			userService.add(user);
@@ -35,7 +32,6 @@ public class UserController {
 	
 	@GetMapping("/users/{id}")
 	public Object get(@PathVariable Long id) {
-		HintManager.getInstance().setMasterRouteOnly();
 		return userService.findById(id);
 	}
 	
